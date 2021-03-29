@@ -4,7 +4,9 @@ const app = express();
 require('./models/dbConfig');
 const postsRoutes = require('./routes/postsController');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
+mongoose.set('useFindAndModify' , false)
 
 
 /* MIDDLEWARE */ 

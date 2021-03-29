@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const PostModel = mongoose.model(
+const PostsModel = mongoose.model(
     "Node-API", //db
     {
         author: {
@@ -23,4 +23,4 @@ const PostModel = mongoose.model(
 
 //Modèle de BDD nomée Node-API , contenant la table posts composée des éléments author et message (requis) + la date de création 
 
-module.exports = { PostModel};
+module.exports = { PostsModel};

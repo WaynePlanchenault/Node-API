@@ -3,10 +3,13 @@ const app = express();
 //initialisation du micro frameworks express
 require('./models/dbConfig');
 const postsRoutes = require('./routes/postsController');
+const bodyParser = require('body-parser');
 
 
 
-app.use('/', postsRoutes)
+/* MIDDLEWARE */ 
+app.use(bodyParser.json());
+app.use('/posts', postsRoutes)
 // quand le chemin est / tu nous envoies à postsRoutes
 //un middleware est une fonction qui va écouter les request et les responses 
 
